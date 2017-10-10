@@ -133,16 +133,16 @@ match_re:
 # How long to initially wait to send a notification for a group
 # of alerts. Allows to wait for an inhibiting alert to arrive or collect
 # more initial alerts for the same group. (Usually ~0s to few minutes.)
-[ group_wait: <duration> ]
+[ group_wait: <duration> | default = 30s ]
 
 # How long to wait before sending a notification about new alerts that
 # are added to a group of alerts for which an initial notification has
-# already been sent. (Usually ~5min or more.)
-[ group_interval: <duration> ]
+# already been sent. (Usually ~5m or more.)
+[ group_interval: <duration> | default = 5m ]
 
 # How long to wait before sending a notification again if it has already
 # been sent successfully for an alert. (Usually ~3h or more).
-[ repeat_interval: <duration> ]
+[ repeat_interval: <duration> | default = 4h ]
 
 # Zero or more child routes.
 routes:
@@ -214,9 +214,7 @@ source_match_re:
 
 Receiver is a named configuration of one or more notification integrations.
 
-__Other receiver implementations available in version 0.0.4 of Alertmanager
-are not implemented yet. We are gladly accepting any contributions to add them
-to the new implementation.__
+__We're not actively adding new receivers, we recommend implementing custom notification integrations via the [webhook](/docs/alerting/configuration/#webhook_config) receiver.__
 
 ```
 # The unique name of the receiver.

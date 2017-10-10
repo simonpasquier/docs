@@ -74,7 +74,7 @@ wide variety of JVM-based applications, for example [Kafka](http://kafka.apache.
    * [ScaleIO exporter](https://github.com/syepes/sio2prom)
 
 ### HTTP
-   * [Apache exporter](https://github.com/neezgee/apache_exporter)
+   * [Apache exporter](https://github.com/Lusitaniae/apache_exporter)
    * [HAProxy exporter](https://github.com/prometheus/haproxy_exporter) (**official**)
    * [Nginx metric library](https://github.com/knyar/nginx-lua-prometheus)
    * [Nginx VTS exporter](https://github.com/hnlq715/nginx-vts-exporter)
@@ -158,6 +158,7 @@ possible.
 Some third-party software exposes metrics in the Prometheus format, so no
 separate exporters are needed:
 
+   * [Ceph](http://docs.ceph.com/docs/master/mgr/prometheus/)
    * [Collectd](https://collectd.org/wiki/index.php/Plugin:Write_Prometheus)
    * [CRG Roller Derby Scoreboard](https://github.com/rollerderby/scoreboard) (**direct**)
    * [Doorman](https://github.com/youtube/doorman) (**direct**)
